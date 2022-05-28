@@ -1,0 +1,55 @@
+#homepage {
+  background-image: url("../public/imgs/water_sprite_lake.JPG");
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+#homepage h1 {
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 5rem;
+  padding-top: 15%;
+  text-shadow: 3px 2px #2d3142;
+}
+
+#aboutme {
+  color: #ffffff;
+  height: 100vh;
+  background-color: #2d3142;
+}
+.org-txt {
+  color: #ef8354;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  background-color: #2d3142;
+}
+
+.navbar .navLinks {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.navbar-brand svg {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.mid-ht-txt {
+  padding-top: 5%;
+}
+
+.icon-border svg {
+  font-size: 2.5rem;
+  padding: 10px;
+}
+
+.icon-border svg:hover {
+  cursor: pointer;
+  color: #ef8354;
+}
