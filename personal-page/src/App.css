@@ -13,11 +13,19 @@
   text-shadow: 3px 2px #2d3142;
 }
 
-#aboutme {
+#aboutme,
+#projects {
   color: #ffffff;
   height: 100vh;
   background-color: #2d3142;
 }
+
+#resume {
+  color: #2d3142;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
 .org-txt {
   color: #ef8354;
   font-weight: bolder;
@@ -52,4 +60,30 @@
 .icon-border svg:hover {
   cursor: pointer;
   color: #ef8354;
+}
+
+.col .card {
+  height: 13rem;
+  width: 30%;
+
+  background-size: cover;
+  min-width: 18rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 3px solid #bbb;
+}
+span.overlay {
+  width: 100%;
+  height: 100%;
+
+  margin-bottom: 0;
+}
+
+.card-content p {
+  color: #ffffff;
+  padding-left: 10px;
+  padding-right: 3px;
+}
+
+.card h3 {
+  text-align: center;
 }
