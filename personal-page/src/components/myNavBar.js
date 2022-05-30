@@ -10,10 +10,10 @@ const NAVLINKS = [
 
 function MyNavBar() {
   return (
-    <Navbar>
+    <Navbar fixed="top">
       <Container>
         <Col>
-          <Navbar.Brand>
+          <Navbar.Brand href="#homepage">
             <FontAwesomeIcon icon={faMountainSun} />
           </Navbar.Brand>
         </Col>

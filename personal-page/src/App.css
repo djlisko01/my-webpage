@@ -18,12 +18,14 @@
   color: #ffffff;
   height: 100vh;
   background-color: #2d3142;
+  overflow: auto;
 }
 
 #resume {
   color: #2d3142;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #ffffff;
+  overflow: scroll;
 }
 
 .org-txt {
@@ -103,4 +105,103 @@ button.details {
   width: 100%;
   font-weight: bold;
   flex: 1;
+}
+
+/* Time Line  */
+
+.timeline {
+  margin: 0 auto;
+  max-width: 900px;
+  margin: 0px auto;
+}
+ul.job-list {
+  list-style: none;
+}
+
+ul.job-list li {
+  border: 1px solid black;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #2d3142;
+  color: #ffffff;
+}
+
+.job-date {
+  float: right;
+  position: relative;
+  font-size: 15px;
+}
+
+.job-title {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .job-date {
+    top: -25px;
+    /* left: 10px; */
+    color: #2d3142;
+    position: absolute;
+  }
+
+  li:nth-child(odd) .job-date {
+    right: 0;
+  }
+
+  li:nth-child(even) .job-date {
+    left: 0;
+  }
+
+  .timeline::before {
+    content: "";
+    background-color: #666;
+    position: absolute;
+    height: 90%;
+    min-height: 800px;
+    width: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ul.job-list li {
+    width: 50%;
+    margin-bottom: 70px;
+    box-shadow: 6px 6px 5px #666;
+  }
+
+  ul.job-list li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-50px);
+    border-radius: 1em 2px 1em 1em;
+  }
+
+  ul.job-list li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(20px);
+    border-radius: 2px 1em 1em 1em;
+  }
+}
+
+ul.job-list li::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 5px solid #ef8354;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+}
+
+ul.job-list li:nth-child(odd)::after {
+  transform: translate(50%, -50%);
+  right: -35px;
+}
+
+ul.job-list li:nth-child(even)::after {
+  transform: translate(50%, -50%);
+  left: -67px;
 }
