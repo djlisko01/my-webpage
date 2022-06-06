@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Resume
-from .serializers import ResumeSerializer
+from .models import Resume, Projects
+from .serializers import ResumeSerializer, ProjectsSerializer
 
 # Create your views here.
 
@@ -9,5 +9,12 @@ from .serializers import ResumeSerializer
 class ResumeView(viewsets.ModelViewSet):
   """ API end point that allows Resume to be viewed or edited """
 
-  queryset = Resume.objects.all().order_by("start_date")
+  queryset = Resume.objects.all()
   serializer_class = ResumeSerializer
+
+
+class ProjectsView(viewsets.ModelViewSet):
+  """ API end point that allows Resume to be viewed or edited """
+
+  queryset = Projects.objects.all()
+  serializer_class = ProjectsSerializer

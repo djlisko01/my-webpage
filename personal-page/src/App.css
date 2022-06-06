@@ -1,3 +1,4 @@
+/* Page Layouts */
 #homepage {
   background-image: url("../public/imgs/water_sprite_lake.JPG");
   background-size: cover;
@@ -25,7 +26,7 @@
   color: #2d3142;
   min-height: 100vh;
   background-color: #ffffff;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .org-txt {
@@ -70,6 +71,8 @@ div.card {
   min-width: 18rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border: 3px solid #bbb;
+
+  margin: 10px;
 }
 
 div.overlay {
@@ -132,33 +135,45 @@ ul.job-list li {
   font-size: 15px;
 }
 
+.company,
 .job-title {
   font-weight: bolder;
   font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-  .job-date {
+  /* .job-date {
     top: -25px;
+    /* left: 10px; */
+  /* color: #2d3142;
+    position: absolute;
+  } */
+
+  .job-title {
+    top: -30px;
     /* left: 10px; */
     color: #2d3142;
     position: absolute;
   }
 
-  li:nth-child(odd) .job-date {
+  /* li:nth-child(odd) .job-date {
     right: 0;
   }
 
   li:nth-child(even) .job-date {
     left: 0;
-  }
+  } */
+
+  /* li:nth-child(even) .job-title {
+    right: 0;
+  } */
 
   .timeline::before {
     content: "";
     background-color: #666;
     position: absolute;
     height: 90%;
-    min-height: 800px;
+    /* min-height: 800px; */
     width: 5px;
     left: 50%;
     transform: translateX(-50%);

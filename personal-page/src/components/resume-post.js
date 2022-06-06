@@ -5,7 +5,11 @@ function ResumeItem(props) {
     <li className="job-content">
       <p>
         <span className="job-title"> {props.position} </span>
-        <span className="job-date">Date Here</span> <br />
+        <span className="company"> {"PACT pharma"} </span>
+        <span className="job-date">
+          {props.start_date} - {props.end_date}
+        </span>{" "}
+        <br />
       </p>
       <p className="job-description">{props.description}</p>
     </li>
