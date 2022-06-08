@@ -6,17 +6,16 @@ import AboutMe from "./components/pages/about-me";
 import Resume from "./components/pages/resume";
 import Projects from "./components/pages/projects";
 import { useEffect, useState } from "react";
-// import { API } from "./components/utils";
+import { API } from "./components/utils";
 
 function App() {
   // States
-
   const [resume, setResume] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/my_api/resume/")
-      .then((resp) => resp.json())
-      .then((data) => setResume(data));
+    API.getResume("resume").then((data) => setResume(data));
+    API.getResume("projects").then((data) => setProjects(data));
   }, []);
 
   return (
@@ -28,7 +27,7 @@ function App() {
       <div>
         <AboutMe />
         <Resume resume={resume} />
-        <Projects />
+        <Projects projects={projects} />
       </div>
     </div>
   );

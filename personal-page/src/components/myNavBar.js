@@ -17,9 +17,14 @@ function MyNavBar() {
             <FontAwesomeIcon icon={faMountainSun} />
           </Navbar.Brand>
         </Col>
-        {NAVLINKS.map((navLink) => {
+        {NAVLINKS.map((navLink, i) => {
           return (
-            <Nav.Link className="navLinks" id={navLink[0]} href={navLink[1]}>
+            <Nav.Link
+              key={i}
+              className="navLinks"
+              id={navLink[0]}
+              href={navLink[1]}
+            >
               {navLink[0]}
             </Nav.Link>
           );

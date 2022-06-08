@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
-function Card() {
+function Card({ project }) {
   const [contentDisplayed, setContentDisplayed] = useState(false);
 
   const cardEntered = () => {
@@ -12,25 +12,27 @@ function Card() {
     setContentDisplayed(false);
   };
 
+  console.log(project);
   return (
-    <div className="card" onMouseEnter={cardEntered} onMouseLeave={cardExited}>
+    <div
+      className="card"
+      style={{ backgroundImage: `url(${project.project_image})` }}
+      onMouseEnter={cardEntered}
+      onMouseLeave={cardExited}
+    >
       <div
         className={`${contentDisplayed ? "overlay" : ""}`}
         style={{
-          "background-color": "rgb(79, 93, 117, 0.8)",
-          "background-image": `url("../../public/imgs/water_sprite_lake.JPG")`,
+          backgroundColor: "rgb(79, 93, 117, 0.8)",
         }}
       >
         <div className="card-title">
-          <h3>Project Title</h3>
+          <h3>{project.project_title}</h3>
         </div>
         {contentDisplayed ? (
           <div className="card-content">
             <div className="card-breifing">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus, aliquid?
-              </p>
+              <p>{project.brief_description}</p>
             </div>
             <Button className="details">More Details</Button>
           </div>

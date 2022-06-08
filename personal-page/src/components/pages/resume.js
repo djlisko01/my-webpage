@@ -7,9 +7,10 @@ function Resume(props) {
       <h2>Resume</h2>
       <div className="timeline">
         <ul className="job-list">
-          {props.resume.map((job) => {
+          {props.resume.map((job, i) => {
             return (
               <ResumeItem
+                key={i}
                 position={job.job_title}
                 description={job.description}
                 start_date={job.start_date}

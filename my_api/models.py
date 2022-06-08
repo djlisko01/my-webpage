@@ -15,6 +15,7 @@ class Resume(models.Model):
     ordering = ("-start_date",)
 
 class Projects(models.Model):
+  project_title = models.CharField(max_length=100)
   brief_description = models.TextField(blank=True, null=True)
   git_url = models.URLField(blank=True, null=True)
-  project_image = models.FileField(blank=True, null=True)
+  project_image = models.ImageField(blank=True, null=True, upload_to="post_images")
