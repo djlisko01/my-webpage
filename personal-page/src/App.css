@@ -129,6 +129,11 @@ ul.job-list li {
   color: #ffffff;
 }
 
+.job-content div {
+  display: flex;
+  flex-direction: ow;
+}
+
 .job-date {
   float: right;
   position: relative;
@@ -141,32 +146,42 @@ ul.job-list li {
   font-size: 20px;
 }
 
-@media only screen and (min-width: 768px) {
-  /* .job-date {
-    top: -25px;
-    /* left: 10px; */
-  /* color: #2d3142;
-    position: absolute;
-  } */
+.job-title {
+  position: relative;
+  float: bottom;
+}
 
-  .job-title {
-    top: -30px;
-    /* left: 10px; */
+/* Adjustments for screens > 768 px */
+@media only screen and (min-width: 768px) {
+  li:nth-child(odd) .job-date {
+    top: -15px;
+    right: -240px;
     color: #2d3142;
     position: absolute;
+    font-size: 20px;
   }
-
-  /* li:nth-child(odd) .job-date {
-    right: 0;
-  }
-
   li:nth-child(even) .job-date {
-    left: 0;
-  } */
+    top: -15px;
+    left: -260px;
+    color: #2d3142;
+    position: absolute;
+    font-size: 20px;
+  }
 
-  /* li:nth-child(even) .job-title {
-    right: 0;
-  } */
+  li:nth-child(odd) .job-title {
+    top: -28px;
+    right: 10px;
+    color: #2d3142;
+    position: absolute;
+    font-size: 20px;
+  }
+
+  li:nth-child(even) .job-title {
+    top: -28px;
+    color: #2d3142;
+    position: absolute;
+    font-size: 20px;
+  }
 
   .timeline::before {
     content: "";

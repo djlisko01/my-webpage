@@ -6,6 +6,7 @@ const NAVLINKS = [
   ["About Me", "#aboutme"],
   ["Resume", "#resume"],
   ["Projects", "#projects"],
+  ["Contact", "#contact"],
 ];
 
 function MyNavBar() {

@@ -4,6 +4,7 @@ import MyNavBar from "./components/myNavBar";
 import HomePage from "./components/pages/homepage";
 import AboutMe from "./components/pages/about-me";
 import Resume from "./components/pages/resume";
+import ContactInfo from "./components/pages/contact-info";
 import Projects from "./components/pages/projects";
 import { useEffect, useState } from "react";
 import { API } from "./components/utils";
@@ -28,6 +29,7 @@ function App() {
         <AboutMe />
         <Resume resume={resume} />
         <Projects projects={projects} />
+        <ContactInfo />
       </div>
     </div>
   );
